@@ -1,0 +1,10 @@
+version: '2'
+services:
+  Turmaformacao:
+    image: postgres:11.5
+    environment:
+      - POSTGRES_USER=joaocastro
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=meubanco
+    ports:
+      - 5433:5432
