@@ -1,9 +1,6 @@
 package cadastro.user;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -14,6 +11,9 @@ public class User {
 
     private String name;
     private String email;
+
+    @ManyToOne
+    private Perfil perfil;
 
     public User(Long id, String name, String email) {
         this.id = id;
@@ -46,5 +46,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Perfil getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
     }
 }
