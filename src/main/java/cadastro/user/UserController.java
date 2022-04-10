@@ -13,7 +13,7 @@ public class UserController {
     private UserRepository userRepository;
 
     //Pegar dados no banco
-    @RequestMapping(value = "",method = RequestMethod.GET)
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<User> findAll(){
         return userRepository.findAll();
     }
