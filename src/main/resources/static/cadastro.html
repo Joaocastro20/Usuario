@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:th="https://www.ultraq.net.nz/thymeleaf/layout" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <form action="#" th:action="user" th:object="user" method="post">
-        Nome:<input type="text" th:field="name"/>
-        Email:<input type="text" th:field="email"/>
+    <form method="post">
+        Nome:<input type="text" value="" name="name"/>
+        Email:<input type="text" value="" name="email"/>
         <button type="submit">Salvar</button>
 
     </form>

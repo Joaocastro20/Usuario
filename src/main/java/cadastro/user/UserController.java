@@ -22,11 +22,13 @@ public class UserController {
     public void findAll(@PathVariable Long id){
         userRepository.deleteById(id);
     }
+
     //salvar dados no banco
     @RequestMapping(value = "", method = RequestMethod.POST)
     public User save(@RequestBody User user){
         return userRepository.save(user);
     }
+
     //alterar dados no banco
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public User update(@RequestBody User user){
