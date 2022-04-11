@@ -30,6 +30,7 @@ public class UserController {
        return userRepository.save(user);
     }
 
+
     //alterar dados no banco
     @RequestMapping(value = "", method = RequestMethod.PUT)
     public User update(@RequestBody User user){
