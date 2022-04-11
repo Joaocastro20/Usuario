@@ -12,6 +12,8 @@ public class Perfil {
     private Long id;
     private String perfiluser;
 
+
+
     public Perfil(Long id, String perfiluser) {
         this.id = id;
         this.perfiluser = perfiluser;
@@ -35,4 +37,6 @@ public class Perfil {
     public void setPerfiluser(String perfiluser) {
         this.perfiluser = perfiluser;
     }
+
+
 }

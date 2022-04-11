@@ -2,6 +2,7 @@ package cadastro.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class UserController {
     private UserRepository userRepository;
 
     //Pegar dados no banco
-    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    @RequestMapping(value = "",method = RequestMethod.GET)
     public List<User> findAll(){
         return userRepository.findAll();
     }
@@ -26,7 +27,7 @@ public class UserController {
     //salvar dados no banco
     @RequestMapping(value = "", method = RequestMethod.POST)
     public User save(@RequestBody User user){
-        return userRepository.save(user);
+       return userRepository.save(user);
     }
 
     //alterar dados no banco
